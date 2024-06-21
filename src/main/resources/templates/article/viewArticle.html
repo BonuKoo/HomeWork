@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ArticleOne</title>
+</head>
+<body>
+    <h1>Article Detail</h1>
+    <div th:if="${article != null}">
+        <p>ID: <span th:text="${article.id}"></span></p>
+        <p>Title: <span th:text="${article.title}"></span></p>
+        <p>Content: <span th:text="${article.content}"></span></p>
+    </div>
+    <div th:if="${article == null}">
+        <p>Article Not Found</p>
+    </div>
+</body>
+</html>
